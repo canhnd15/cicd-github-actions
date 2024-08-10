@@ -48,4 +48,4 @@ jobs:
           context: .
           dockerfile: Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/blog-backend:1.0.2
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/cicd-demo:1.0.0
