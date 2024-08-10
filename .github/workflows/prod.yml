@@ -24,3 +24,25 @@ jobs:
         run: |
           echo "Build on product environment"
           mvn clean package -DskipTests
+          
+      - name: Build Docker image
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          dockerfile: Dockerfile
+          push: false
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/cicd-demo-prod:1.0.0
+
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN_PROD }}
+
+      - name: Push image to DockerHub
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          dockerfile: Dockerfile
+          push: true
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/cicd-demo-prod:1.0.0
