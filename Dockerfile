@@ -6,4 +6,4 @@ COPY target/cicd-demo-*.jar /app/cicd-demo.jar
 
 EXPOSE 8090
 
-CMD ["jave", "-jar", "cicd-demo.jar"]
+CMD ["java", "-jar", "cicd-demo.jar"]

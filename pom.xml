@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.davidnguyen</groupId>
-	<artifactId>cicd</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>cicd</name>
+	<artifactId>cicd-demo</artifactId>
+	<version>1.0.0</version>
+	<name>cicd-demo</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
