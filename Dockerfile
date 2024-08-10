@@ -2,8 +2,8 @@ FROM openjdk:17-jdk
 
 WORKDIR /app
 
-COPY target/blog-backend-*.jar /app/blog-backend.jar
+COPY target/cicd-demo-*.jar /app/cicd-demo.jar
 
 EXPOSE 8090
 
-CMD ["java", "-jar", "blog-backend.jar"]
+CMD ["java", "-jar", "cicd-demo.jar"]
