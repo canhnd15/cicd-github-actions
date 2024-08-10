@@ -25,5 +25,5 @@ jobs:
 
       - name: Build with Maven
         run: |
-          echo "Build on branch dev"
-          mvn clean package -DskipTests
+          echo "Build on dev environment"
+          mvn -B package --file pom.xml
